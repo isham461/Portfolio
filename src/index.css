@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3b82f6;
+  --color-secondary: #6366f1;
+}
+
+/* Enable class-based dark mode in Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    color-scheme: light;
+  }
+  
+  html.dark {
+    background-color: #0b1120;
+    color: #f8fafc;
+    color-scheme: dark;
+  }
+}
+
+* {
+  @apply transition-colors duration-300;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
