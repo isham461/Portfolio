@@ -1,4 +1,4 @@
-import { ExternalLink, Github, Activity, ShieldCheck, Palette, ShieldAlert } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -10,7 +10,7 @@ const Projects = () => {
         "Designed a modern, glassmorphic UI featuring a real-time AI advisor chat, legal rights vault, and emergency first-aid dashboard."
       ],
       tech: ["React", "Tailwind CSS", "RAG", "IBM Granite AI"],
-      icon: <ShieldAlert className="text-emerald-500" size={40} />,
+      image: "/pawgaurd.png",
       live: null,
       github: "https://github.com/isham461/PawGuardAI"
     },
@@ -18,7 +18,7 @@ const Projects = () => {
       title: "Dais Activity Hub",
       description: "A centralized platform designed to streamline, track, and manage events and daily engagements. Built with a strong focus on delivering a clean, intuitive frontend interface for seamless activity monitoring.",
       tech: ["React", "Tailwind CSS"],
-      icon: <Activity className="text-indigo-500" size={40} />,
+      image: "/dais.png",
       live: "https://dais-activity-hub.vercel.app",
       github: null
     },
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "AuraAudit",
       description: "An AI-powered web accessibility and UX auditing tool prototype. Designed with a modern, responsive architecture to help developers and designers visually evaluate and improve website usability and compliance.",
       tech: ["React", "TypeScript", "Tailwind CSS"],
-      icon: <ShieldCheck className="text-pink-500" size={40} />,
+      image: "/auraaudit.png",
       live: null,
       github: "https://github.com/isham461/auraaudit.git"
     },
@@ -34,7 +34,7 @@ const Projects = () => {
       title: "Lettering Gallery",
       description: "A custom digital gallery showcasing my physical Gothic and Blackletter calligraphy artwork. This visually rich portfolio highlights my artistic eye and translates my lettering skills into an interactive web experience.",
       tech: ["React", "Tailwind CSS", "Framer Motion"],
-      icon: <Palette className="text-blue-500" size={40} />,
+      image: "/letteringgallery.png",
       live: "https://lettering-seven.vercel.app/#gallery",
       github: "https://github.com/isham461/lettering.git"
     }
@@ -52,12 +52,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="group bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-lg border border-slate-100 dark:border-slate-800 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between">
               <div>
-                <div className="h-48 bg-slate-100 dark:bg-slate-800 flex items-center justify-center relative overflow-hidden">
-                  <div className="transform group-hover:scale-110 transition-transform duration-500">
-                    {project.icon}
-                  </div>
-                  {/* Decorative background element */}
-                  <div className="absolute inset-0 opacity-10 pointer-events-none bg-linear-to-br from-blue-500 to-transparent" />
+                <div className="h-52 w-full bg-slate-100 dark:bg-slate-800 relative overflow-hidden">
+                  <img 
+                    src={project.image} 
+                    alt={project.title} 
+                    className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                  />
+                  <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors duration-300 pointer-events-none" />
                 </div>
                 
                 <div className="p-8">
