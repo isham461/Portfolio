@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FileText } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -15,7 +15,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg md:text-2xl text-slate-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-          First-Year AI & Data Science Student | Frontend Developer | Python Enthusiast
+          Second-Year AI & Data Science Student | Data Analytics & Frontend Developer
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
@@ -25,6 +25,15 @@ const Hero = () => {
           >
             View My Work
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </a>
+
+          <a
+            href="/ResumeC.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full font-bold text-lg transition-all hover:scale-105"
+          >
+            <FileText className="mr-2" size={20} /> Resume
           </a>
           
           <a

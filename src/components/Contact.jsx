@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, Code2 } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
 
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
-          <div className="space-y-8">
+          <div className="space-y-6">
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Contact Information</h3>
             
             <a href="mailto:ishamnew@gmail.com" className="flex items-center group p-4 rounded-2xl bg-blue-50/50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
@@ -44,25 +44,37 @@ const Contact = () => {
                 <p className="text-lg font-medium text-slate-700 dark:text-slate-200">github.com/isham461</p>
               </div>
             </a>
+
+            <a href="https://leetcode.com/u/IshamA/" target="_blank" rel="noopener noreferrer" className="flex items-center group p-4 rounded-2xl bg-blue-50/50 dark:bg-slate-800/50 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors">
+              <div className="p-3 bg-white dark:bg-slate-900 rounded-xl shadow-sm text-amber-500 dark:text-amber-400 group-hover:scale-110 transition-transform">
+                <Code2 size={24} />
+              </div>
+              <div className="ml-4">
+                <p className="text-sm font-bold text-slate-400 uppercase tracking-wider">LeetCode</p>
+                <p className="text-lg font-medium text-slate-700 dark:text-slate-200">leetcode.com/u/IshamA</p>
+              </div>
+            </a>
           </div>
 
           {/* Quick Contact Message */}
-          <div className="p-8 bg-blue-50/50 dark:bg-slate-800/50 rounded-3xl border border-blue-100 dark:border-slate-800">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Quick Message</h3>
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">Your Message</label>
-                <textarea 
-                  className="w-full p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
-                  rows="4"
-                  placeholder="Type your message here..."
-                ></textarea>
+          <div className="p-8 bg-blue-50/50 dark:bg-slate-800/50 rounded-3xl border border-blue-100 dark:border-slate-800 flex flex-col justify-between">
+            <div>
+              <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Quick Message</h3>
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm font-bold text-slate-500 dark:text-slate-400 mb-2 uppercase tracking-wide">Your Message</label>
+                  <textarea 
+                    className="w-full p-4 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 focus:ring-2 focus:ring-blue-500 outline-none transition-all dark:text-white"
+                    rows="4"
+                    placeholder="Type your message here..."
+                  ></textarea>
+                </div>
               </div>
-              <button className="w-full flex items-center justify-center py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold text-lg transition-all group shadow-lg shadow-blue-200 dark:shadow-none">
-                Send Message
-                <Send size={20} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              </button>
             </div>
+            <button className="w-full flex items-center justify-center py-4 mt-6 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl font-bold text-lg transition-all group shadow-lg shadow-blue-200 dark:shadow-none">
+              Send Message
+              <Send size={20} className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
           </div>
         </div>
       </div>

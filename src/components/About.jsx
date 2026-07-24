@@ -1,6 +1,13 @@
 import { Code, Database, Palette } from 'lucide-react';
 
 const About = () => {
+  const posters = [
+    { src: '/posters/BMW.png', title: 'BMW Poster' },
+    { src: '/posters/ICe.png', title: 'Ice Cream Poster' },
+    { src: '/posters/watch.png', title: 'Watch Poster' },
+    { src: '/posters/bp.jpg', title: 'Brand Poster' }
+  ];
+
   return (
     <section id="about" className="py-24 bg-blue-50/50 dark:bg-slate-800/50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -9,34 +16,66 @@ const About = () => {
           <div className="h-1.5 w-24 bg-blue-600 rounded-full mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          {/* Paragraphs Column */}
+          <div className="lg:col-span-6 space-y-6">
             <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-              I am a passionate <span className="font-semibold text-blue-600 dark:text-blue-400">First-Year B.Tech student</span> specializing in Artificial Intelligence & Data Science. I bridge the gap between creative web development and analytical data science.
+              I am a driven <span className="font-semibold text-blue-600 dark:text-blue-400">Second-Year B.Tech student</span> specializing in Artificial Intelligence & Data Science. I bridge the gap between creative web development and analytical data science to build practical, user-centric applications.
             </p>
             <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed">
-              Currently, I am actively honing my skills in <span className="italic font-medium">Data Structures and Algorithms (DSA)</span> and building modern, responsive user interfaces.
+              Currently, I am expanding my technical toolkit with competitive programming, developing modern full-stack web solutions, and building intuitive dashboards with Power BI, Tableau, and Excel to derive actionable insights from complex data.
             </p>
             <p className="text-xl text-slate-700 dark:text-slate-300 leading-relaxed italic">
-              When I'm not coding, you'll likely find me exploring the elegant art of calligraphy, where I find a creative balance to my technical work.
+              When I'm not coding or designing, I explore intricate forms of Gothic calligraphy, finding a creative discipline that enhances my technical work.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform">
+          {/* Cards Column */}
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {/* Card 1: Frontend Dev */}
+            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.02] transition-transform">
               <Code className="text-blue-600 dark:text-blue-400 mb-4" size={32} />
               <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Frontend Dev</h3>
-              <p className="text-slate-500 dark:text-slate-400">Crafting intuitive and responsive UI/UX using React and Tailwind.</p>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Crafting intuitive, responsive, and cross-platform UI/UX using React, TypeScript, and modern frameworks.
+              </p>
             </div>
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform">
+
+            {/* Card 2: Data Science */}
+            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.02] transition-transform">
               <Database className="text-indigo-600 dark:text-indigo-400 mb-4" size={32} />
               <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Data Science</h3>
-              <p className="text-slate-500 dark:text-slate-400">Analyzing patterns and building models with Python, Pandas, and NumPy.</p>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                <span className="font-semibold text-slate-800 dark:text-slate-200">Data-driven Insights:</span> building and integrating models, and visualizing complex datasets through Power BI, Tableau, and Excel dashboards.
+              </p>
             </div>
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-105 transition-transform sm:col-span-2">
-              <Palette className="text-pink-600 dark:text-pink-400 mb-4" size={32} />
-              <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Creative Arts</h3>
-              <p className="text-slate-500 dark:text-slate-400">Practicing calligraphy to maintain a sharp eye for detail and aesthetics.</p>
+
+            {/* Card 3: Creative Arts */}
+            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.01] transition-transform sm:col-span-2">
+              <div className="flex items-center mb-3">
+                <Palette className="text-pink-600 dark:text-pink-400 mr-3" size={28} />
+                <h3 className="font-bold text-xl text-slate-900 dark:text-white">Creative Arts</h3>
+              </div>
+              <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-4">
+                <span className="font-semibold text-slate-800 dark:text-slate-200">Product Poster Design:</span> Blending aesthetic vision with precise layout and brand narrative.
+              </p>
+
+              {/* Poster Gallery */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
+                {posters.map((poster, index) => (
+                  <div key={index} className="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 aspect-3/4 shadow-sm hover:shadow-md transition-all">
+                    <img 
+                      src={poster.src} 
+                      alt={poster.title} 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                      <span className="text-xs font-semibold text-white truncate">{poster.title}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

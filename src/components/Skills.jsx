@@ -1,16 +1,16 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Development",
-      skills: ["React.js", "Tailwind CSS", "HTML/CSS", "JavaScript"]
+      title: "Data Analytics & Visualization",
+      skills: ["Power BI", "Tableau", "Streamlit", "Excel", "Google Spreadsheets", "Pandas", "NumPy", "Matplotlib", "Data Analysis & Visualization"]
     },
     {
-      title: "Data Science",
-      skills: ["Python", "Pandas", "NumPy"]
+      title: "Development & Languages",
+      skills: ["Python", "C", "HTML5", "CSS3", "JavaScript"]
     },
     {
-      title: "Tools & Version Control",
-      skills: ["Git", "GitHub", "Vite", "VS Code"]
+      title: "Tools & Coding Platforms",
+      skills: ["Git", "GitHub", "LeetCode", "Jupyter Notebooks", "Kaggle", "VS Code", "Vercel"]
     }
   ];
 
@@ -18,7 +18,7 @@ const Skills = () => {
     <section id="skills" className="py-24 bg-white dark:bg-slate-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Skills</h2>
+          <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Skills & Tools</h2>
           <div className="h-1.5 w-24 bg-blue-600 rounded-full mx-auto" />
         </div>
 

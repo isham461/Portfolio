@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react';
+import { Moon, Sun, Menu, X, FileText } from 'lucide-react';
 import { useTheme } from '../hooks/useTheme';
 
 const Navbar = () => {
@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Resume', href: '/ResumeC.pdf', external: true },
   ];
 
   return (
@@ -27,8 +28,11 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className="text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors flex items-center gap-1"
               >
+                {link.name === 'Resume' && <FileText size={16} />}
                 {link.name}
               </a>
             ))}
@@ -67,6 +71,8 @@ const Navbar = () => {
               <a
                 key={link.name}
                 href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 onClick={() => setIsMenuOpen(false)}
                 className="block px-3 py-2 rounded-md text-base font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800 hover:text-blue-600 dark:hover:text-blue-400"
               >
