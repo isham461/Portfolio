@@ -79,7 +79,7 @@ const Contact = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">LinkedIn</p>
-                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">linkedin.com/in/isham-a-0059a8381</p>
+                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">Isham A</p>
               </div>
             </a>
 
@@ -89,7 +89,7 @@ const Contact = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">GitHub</p>
-                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">github.com/isham461</p>
+                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">isham461</p>
               </div>
             </a>
 
@@ -99,7 +99,7 @@ const Contact = () => {
               </div>
               <div className="ml-4">
                 <p className="text-sm font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">LeetCode</p>
-                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">leetcode.com/u/IshamA</p>
+                <p className="text-lg font-medium text-slate-800 dark:text-slate-200">IshamA</p>
               </div>
             </a>
           </div>
