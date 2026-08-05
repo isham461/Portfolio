@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #3b82f6;
-  --color-secondary: #6366f1;
+  --color-primary: #2563eb;
+  --color-secondary: #0284c7;
+  --font-anton: 'Anton', sans-serif;
+}
+
+.font-anton {
+  font-family: 'Anton', sans-serif;
 }
 
 /* Enable class-based dark mode in Tailwind v4 */
@@ -10,13 +15,13 @@
 
 @layer base {
   :root {
-    background-color: #ffffff;
-    color: #1a1a1a;
+    background-color: #f8fafc;
+    color: #0f172a;
     color-scheme: light;
   }
   
   html.dark {
-    background-color: #0b1120;
+    background-color: #020617;
     color: #f8fafc;
     color-scheme: dark;
   }
@@ -30,4 +35,19 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #f8fafc;
+  background-image: radial-gradient(at 50% 0%, #e0f2fe 0px, transparent 75%),
+                    radial-gradient(at 100% 100%, #dbeafe 0px, transparent 60%),
+                    radial-gradient(at 0% 50%, #eff6ff 0px, transparent 60%);
+  background-attachment: fixed;
+  color: #0f172a;
 }
+
+html.dark body {
+  background-color: #000000;
+  background-image: radial-gradient(at 50% 0%, #091a44 0px, transparent 75%),
+                    radial-gradient(at 100% 100%, #030b21 0px, transparent 60%),
+                    radial-gradient(at 0% 50%, #051438 0px, transparent 60%);
+  color: #f8fafc;
+}
+

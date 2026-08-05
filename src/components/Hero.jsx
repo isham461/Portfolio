@@ -2,43 +2,38 @@ import { ArrowRight, FileText } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-white dark:bg-[#0b1120] transition-colors duration-500">
-      {/* Visual background accents */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-blue-600/10 dark:bg-blue-600/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/10 dark:bg-indigo-600/10 rounded-full blur-[120px] animate-pulse delay-700" />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center bg-transparent transition-colors duration-500 overflow-hidden">
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-8xl font-black text-slate-900 dark:text-white mb-6 tracking-tight">
-          Hi, I'm <span className="text-blue-600 dark:text-blue-400">ISHAM</span>
+        <h1 className="font-anton text-5xl md:text-8xl text-slate-900 dark:text-white mb-6 tracking-wide">
+          Hi, I'm <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 dark:from-blue-400 dark:via-blue-500 dark:to-cyan-400 bg-clip-text text-transparent">ISHAM</span>
         </h1>
         
-        <p className="text-lg md:text-2xl text-slate-600 dark:text-gray-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
-          Second-Year AI & Data Science Student | Data Analytics & Frontend Developer
+        <p className="text-lg md:text-2xl text-slate-600 dark:text-slate-300 mb-10 max-w-2xl mx-auto font-medium leading-relaxed">
+          Second-Year AI & Data Science Student | Data Analyst & Frontend Developer
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
           <a
             href="#projects"
-            className="group flex items-center px-8 py-4 bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500 rounded-full font-bold text-lg shadow-xl shadow-blue-500/20 dark:shadow-none transition-all hover:scale-105"
+            className="group flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white rounded-full font-bold text-lg shadow-xl shadow-blue-600/30 hover:shadow-blue-500/50 hover:scale-105 border border-blue-400/30 transition-all"
           >
             View My Work
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
           </a>
 
           <a
-            href="/ResumeC.pdf"
+            href="/IshamResume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center px-8 py-4 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-white border border-slate-300 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full font-bold text-lg transition-all hover:scale-105"
+            className="flex items-center px-8 py-4 bg-white/80 hover:bg-blue-50 text-slate-800 border border-blue-200 hover:border-blue-400 rounded-full font-bold text-lg backdrop-blur-md shadow-md transition-all hover:scale-105 dark:bg-[#061330]/80 dark:hover:bg-[#0b1f4d] dark:text-white dark:border-blue-800/60 dark:hover:border-blue-500"
           >
             <FileText className="mr-2" size={20} /> Resume
           </a>
           
           <a
             href="#contact"
-            className="px-8 py-4 text-slate-800 border border-slate-300 hover:bg-slate-100 dark:text-white dark:border-gray-600 dark:hover:bg-gray-800 rounded-full font-bold text-lg transition-all"
+            className="px-8 py-4 bg-white/80 hover:bg-blue-50 text-slate-800 border border-blue-200 hover:border-blue-400 rounded-full font-bold text-lg backdrop-blur-md shadow-md transition-all hover:scale-105 dark:bg-[#061330]/80 dark:hover:bg-[#0b1f4d] dark:text-white dark:border-blue-800/60 dark:hover:border-blue-500"
           >
             Get in Touch
           </a>
@@ -47,7 +42,7 @@ const Hero = () => {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-        <div className="w-1 h-12 bg-linear-to-b from-blue-600 to-transparent rounded-full opacity-40" />
+        <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-transparent rounded-full opacity-60" />
       </div>
     </section>
   );

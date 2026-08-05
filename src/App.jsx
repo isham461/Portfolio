@@ -5,12 +5,16 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import GeometricBackdrop from './components/GeometricBackdrop';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-[#0b1120] transition-colors duration-300 selection:bg-blue-100 dark:selection:bg-blue-900 selection:text-blue-900 dark:selection:text-blue-100">
+    <div className="relative min-h-screen text-slate-900 dark:text-slate-100 transition-colors duration-300 selection:bg-blue-600 selection:text-white">
+      {/* Fixed Full-Page Geometric Backdrop */}
+      <GeometricBackdrop />
+
       <Navbar />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />

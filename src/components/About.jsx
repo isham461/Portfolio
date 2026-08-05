@@ -9,11 +9,11 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-24 bg-blue-50/50 dark:bg-slate-800/50 transition-colors duration-300">
+    <section id="about" className="py-24 bg-gradient-to-b from-transparent via-blue-100/30 dark:via-[#030c25]/80 to-transparent transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">About Me</h2>
-          <div className="h-1.5 w-24 bg-blue-600 rounded-full mx-auto" />
+          <div className="h-1.5 w-24 bg-gradient-to-r from-blue-600 to-cyan-400 rounded-full mx-auto" />
         </div>
 
         <div className="grid lg:grid-cols-12 gap-12 items-start">
@@ -33,7 +33,7 @@ const About = () => {
           {/* Cards Column */}
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Card 1: Frontend Dev */}
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.02] transition-transform">
+            <div className="p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg shadow-blue-500/5 border border-blue-100 hover:border-blue-300 hover:scale-[1.02] transition-all dark:bg-gradient-to-b dark:from-[#071536]/80 dark:to-[#020716]/90 dark:border-blue-900/40 dark:hover:border-blue-500/60">
               <Code className="text-blue-600 dark:text-blue-400 mb-4" size={32} />
               <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Frontend Dev</h3>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
@@ -42,8 +42,8 @@ const About = () => {
             </div>
 
             {/* Card 2: Data Science */}
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.02] transition-transform">
-              <Database className="text-indigo-600 dark:text-indigo-400 mb-4" size={32} />
+            <div className="p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg shadow-blue-500/5 border border-blue-100 hover:border-blue-300 hover:scale-[1.02] transition-all dark:bg-gradient-to-b dark:from-[#071536]/80 dark:to-[#020716]/90 dark:border-blue-900/40 dark:hover:border-blue-500/60">
+              <Database className="text-cyan-600 dark:text-cyan-400 mb-4" size={32} />
               <h3 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Data Science</h3>
               <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
                 <span className="font-semibold text-slate-800 dark:text-slate-200">Data-driven Insights:</span> building and integrating models, and visualizing complex datasets through Power BI, Tableau, and Excel dashboards.
@@ -51,7 +51,7 @@ const About = () => {
             </div>
 
             {/* Card 3: Creative Arts */}
-            <div className="p-6 bg-white dark:bg-slate-900 rounded-2xl shadow-md border border-slate-100 dark:border-slate-800 hover:scale-[1.01] transition-transform sm:col-span-2">
+            <div className="p-6 bg-white/80 backdrop-blur-md rounded-2xl shadow-lg shadow-blue-500/5 border border-blue-100 hover:border-blue-300 hover:scale-[1.01] transition-all sm:col-span-2 dark:bg-gradient-to-b dark:from-[#071536]/80 dark:to-[#020716]/90 dark:border-blue-900/40 dark:hover:border-blue-500/60">
               <div className="flex items-center mb-3">
                 <Palette className="text-pink-600 dark:text-pink-400 mr-3" size={28} />
                 <h3 className="font-bold text-xl text-slate-900 dark:text-white">Creative Arts</h3>
@@ -63,14 +63,14 @@ const About = () => {
               {/* Poster Gallery */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-4">
                 {posters.map((poster, index) => (
-                  <div key={index} className="group relative overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 aspect-3/4 shadow-sm hover:shadow-md transition-all">
+                  <div key={index} className="group relative overflow-hidden rounded-xl border border-blue-200 dark:border-blue-900/50 bg-slate-100 dark:bg-[#030919] aspect-3/4 shadow-sm hover:shadow-md transition-all">
                     <img 
                       src={poster.src} 
                       alt={poster.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                       loading="lazy"
                     />
-                    <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
+                    <div className="absolute inset-0 bg-slate-950/75 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-2">
                       <span className="text-xs font-semibold text-white truncate">{poster.title}</span>
                     </div>
                   </div>
