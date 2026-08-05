@@ -31,9 +31,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Resume & PDF files
-*.pdf
-public/*.pdf
+# Include public resume for Vercel deployment
+!public/IshamResume.pdf
 
 # Backdrop & heavy design image files
 bd.png
